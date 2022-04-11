@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+</head>
+<body>
+    <!-- 头部logo部分 -->
+    <!-- layui-main用于设置一个宽度为 1140px 的水平居中块（无响应式） -->
+    <div class="layui-main">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+
+    <!-- 登录注册部分 -->
+    <div class="loginBox">
+        <!-- 头部div,里面的文字为背景图片 -->
+        <div class="title"></div>
+
+        <!-- 登录div -->
+        <div class="login">
+            <!-- href="javascript:;"代表的是发生动作时执行一段javascript代码，
+                但是这个代码是空的，所以什么也不执行 -->
+            <a href="javascript:;" id="aL">去注册账号</a>
+        </div>
+
+        <!-- 注册div -->
+        <div class="register hidden">
+            <a href="javascript:;" id="aR">去登录</a>
+        </div>
+    </div>
+
+    <!-- jquery必须在自己的js之前 -->
+    <script src="./assets/lib/jquery.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>

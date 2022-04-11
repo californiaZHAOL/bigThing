@@ -1,0 +1,44 @@
+html, body{
+    /* 清除默认样式 */
+    margin: 0;
+    padding: 0;
+    /* html和body默认没有高度 */
+    /* html和body默认的高度是0， 这样导致它们的子元素使用百分比高度时，就会失效
+    如果给html和body均设置height: 100% ，则浏览器会自动分配一个高度给html和body，
+    即使我们不知道html标签的父标签是什么。这个高度是浏览器显示的高度。
+    值得注意的是，如果给body设置background-color，依然可以看到满屏的颜色，
+    即使它的高度为0，这应该是浏览器本身对body背景颜色的一种实现行为 */
+    height: 100%;
+    background: url(./../images/login_bg.jpg) no-repeat;
+    /* 背景图片的大小为覆盖 */
+    background-size: cover;
+}
+
+.loginBox{
+    width: 400px;
+    height: 310px;
+    background-color: aqua;
+
+    /* 让div处在页面的最中间 */
+    /* 先绝对定位到盒子参照元素的左边上边各50%的距离 */
+    /* 然后在利用c3的tranform属性把盒子沿着X和Y轴逆向退回50%的宽和高 */
+    /* 或者利用margin */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-left: -200px;
+    margin-top: -155px; */
+}
+
+.loginBox .title{
+    width: 100%;
+    height: 60px;
+    background: url(./../images/login_title.png) no-repeat center;
+}
+
+/* hidden为隐藏类 */
+.loginBox .hidden{
+    /* 默认隐藏 */
+    display: none;
+}
