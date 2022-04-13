@@ -10,19 +10,6 @@ $.ajaxPrefilter(function(options){
     if(options.url.indexOf('/my/') !== -1){
         options.headers = {
             Authorization: localStorage.getItem('token') || ''
-        },
-        
-        // 无论ajax成功还是失败，都会调用complete
-        options.complete = function(res){
-            // res.responseJSON为服务器响应的数据
-            // console.log(res.responseJSON);
-            
-            if(res.responseJSON.status === 1){
-                // 强制清空token
-                localStorage.removeItem('token');
-                // 跳转到登录页
-                location.href = './login.html';
-            }
         }
     }
     
