@@ -1,6 +1,6 @@
 // 127.0.0.1
 // http://www.liulongbin.top:3007
-const rootUrl = 'http://www.liulongbin.top:3007';
+const rootUrl = 'http://127.0.0.1';
 // 客户端发起所有ajax请求前会进入这个过滤器，参数options是我们发起的请求的配置对象
 // 统一拼接请求的根路径
 $.ajaxPrefilter(function(options){
@@ -12,5 +12,4 @@ $.ajaxPrefilter(function(options){
             Authorization: localStorage.getItem('token') || ''
         }
     }
-    
 });

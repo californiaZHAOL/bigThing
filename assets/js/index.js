@@ -43,7 +43,7 @@ function getUserInfo(){
                 // 表明用户登录信息过期，要重新登录
                 // 且不需要渲染头像
                 return layui.use(['layer'], function(){
-                    layui.layer.msg('请登录后再操作', {time: 4000});
+                    layui.layer.msg('请登录后再操作', {icon: 5, time: 2000});
                 });
             }
             // 请求成功
@@ -51,7 +51,6 @@ function getUserInfo(){
             renderAvater(res.data);
         },
 
-        // 下面的逻辑放在rootUrl.js的过滤器中
         // 无论ajax成功还是失败，都会调用complete
         complete: function(res){
             // res.responseJSON为服务器响应的数据

@@ -83,7 +83,7 @@ $(function(){
                     return layui.layer.msg(res.message);
                 }
                 // console.log('注册成功');
-                layui.layer.msg('注册成功 快去登录吧');
+                layui.layer.msg('注册成功 快去登录吧', {icon: 1, time: 800});
                 // 切换为登录表单
                 $('#aR').click();
             }
@@ -115,7 +115,7 @@ $(function(){
                     // layui自动弹出提示
                     return layui.layer.msg(res.message);
                 }
-                layui.layer.msg('登录成功');
+                layui.layer.msg('登录成功', {icon: 1, time: 800});
                 // 把token字符串保存到本地存储
                 // 当客户端再次发起请求时，通过请求头的Authorization字段将Token发送给服务器
                 localStorage.setItem('token', res.token);

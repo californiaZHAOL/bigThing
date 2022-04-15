@@ -8,8 +8,13 @@ $(function(){
     // 自定义验证规则
     form.verify({
         nickname: function(value){
-            if(value.value > 6){
+            if(value.length > 6){
                 return '昵称长度必须为1-6位字符';
+            }
+        },
+        myemail: function(value){
+            if(!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(value) && value.length > 1){
+                return '邮箱格式不正确';
             }
         }
     });
@@ -55,7 +60,7 @@ $(function(){
     });
 
     // 表单数据的提交
-    $('button[type=submit]').click(function(event){
+    $('.layui-form').on('submit', function(event){
         // 阻止默认提交行为
         event.preventDefault();
         // 发起请求提交修改
